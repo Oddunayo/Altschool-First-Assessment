@@ -1,0 +1,157 @@
+:root {
+  --bg: #faf9f7;
+  --border: #e1ddd8;
+  --text: #333;
+  --card-bg: rgb(184, 64, 64);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+/* ===========================
+   HEADER
+=========================== */
+header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 3px solid var(--border);
+  background: #a71717;
+  color: white;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.3rem;
+}
+
+header p {
+  font-size: 1rem;
+  margin: 0 auto;
+}
+/* ===========================
+   MAIN LAYOUT
+=========================== */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+figure img:hover {
+  transform: scale(1.03);
+}
+
+figcaption {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+section,
+article {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border: 1px solid white;
+  color: whitesmoke;
+  margin-bottom: 5px;
+}
+
+section h2,
+article h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+ul,
+ol {
+  padding-left: 1.2rem;
+}
+
+ul li,
+ol li {
+  margin-bottom: 15px;
+}
+
+/* ===========================
+   NUTRITION FACTS (DL)
+=========================== */
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0;
+}
+
+/* ===========================
+   LINKS / HOVER EFFECTS
+=========================== */
+a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr; /* image left, content right */
+  }
+
+  figure {
+    align-self: start;
+    text-align: left;
+  }
+}
+
+/* Desktop wide */
+@media (min-width: 1100px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  header {
+    padding: 15px 18px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+}
